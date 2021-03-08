@@ -1,0 +1,40 @@
+Your first challenge is to print "hello world" on the terminal in a single command. 
+ans. root@kiran:# echo hello,world hello,world root@kiran:#
+Print the current working directory. 
+ans. pwd
+List names of all the files in the current directory, one file per line. 
+ans. ls
+There is a file named access.log in the current directory. Print the contents. 
+ans. cat access.log
+Print the last 5 lines of "access.log" 
+ans. tail -5 access.log
+There is a file named “access.log” in the current working directory. Print all lines in this file that contains the string “GET”. 
+Ans: grep ‘GET’ ./access.log
+Create an empty file named take-the-command-challenge in the current working directory. 
+ans. touch take-the-command-challenge
+Create a directory named tmp/files in the current working directory 
+ans. mkdir tmp && cd tmp && mkdir files && cd files
+Copy the file named take-the-command-challenge to the directory tmp/files 
+ans. cp -r take-the-command-challenge tmp/files/
+Move the file named take-the-command-challenge to the directory tmp/files 
+ans. mv take-the-command-challenge cd tmp/files
+A symbolic link is a type of file that is a reference to another file. Create a symbolic link named take-the-command-challenge that points to the file tmp/files/take-the-command-challenge. 
+ans. ln -s -v tmp/files/take-the-command-challenge take-the-command-challenge
+Delete all of the files in this challenge directory including all subdirectories and their contents. 
+ans. rm -Rf .* *
+There are files in this challenge with different file extensions. Remove all files with the .doc extension recursively in the current working directory. 
+ans. find . -name "*.doc" -delete
+There is a file named access.log in the current working directory. Print all lines in this file that contains the string "GET". 
+ans. grep -i get access.log
+Print all files in the current directory, one per line (not the path, just the filename) that contain the string "500". 
+ans. grep -Rl "500"
+Print the relative file paths, one path per line for all filenames that start with "access.log" in the current directory. 
+ans. ls -r access*
+Print all matching lines (without the filename or the file path) in all files under the current directory that start with "access.log" that contain the string "500". Note that there are no files named access.log in the current directory, you will need to search recursively. 
+ans. find . -name "access.log*" | xargs grep -h 500
+Extract all IP addresses from files that start with "access.log" printing one IP address per line. 
+ans. grep -ro ^[0-9.]*
+Count the number of files in the current working directory. Print the number of files as a single integer. 
+ans. ls -o|wc -l
+Print the contents of access.log sorted. 
+ans. sort access*
