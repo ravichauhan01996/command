@@ -1,5 +1,6 @@
 Your first challenge is to print "hello world" on the terminal in a single command. 
-ans. root@ravi:# echo hello,world hello,world root@ravi:#
+ans. root@ravi:# echo hello world 
+hello world 
 Print the current working directory. 
 ans. pwd
 List names of all the files in the current directory, one file per line. 
